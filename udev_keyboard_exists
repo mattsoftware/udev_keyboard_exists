@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+: ${KEYBOARD_FILE=/var/has_keyboard}
+
+if [[ "$ID_INPUT_KEYBOARD" == 1 ]]; then
+        [[ "$ACTION" == "add" ]] && touch $KEYBOARD_FILE
+        [[ "$ACTION" == "remove" ]] && rm $KEYBOARD_FILE
+fi
+
