@@ -7,11 +7,13 @@ BUILD_FOLDER="build/udev_keyboard_exists-$VERSION"
 echo "Building for version $VERSION (in $BUILD_FOLDER)"
 
 mkdir -p "$BUILD_FOLDER"/etc/udev/rules.d
+mkdir -p "$BUILD_FOLDER"/etc/systemd/system
 mkdir -p "$BUILD_FOLDER"/usr/bin
 
 cp udev_keyboard_exists "$BUILD_FOLDER"/usr/bin/udev_keyboard_exists
 cp udev_keyboard_exists.conf "$BUILD_FOLDER"/etc/udev_keyboard_exists.conf
 cp 90-keyboard_exists.rules "$BUILD_FOLDER"/etc/udev/rules.d/90-keyboard_exists.rules
+cp remove_keyboard_exists_file.service "$BUILD_FOLDER"/etc/systemd/system/remove_keyboard_exists_file.service
 cp -a DEBIAN "$BUILD_FOLDER"/DEBIAN
 sed -i 's|$VERSION|'$VERSION'|g' "$BUILD_FOLDER"/DEBIAN/control
 

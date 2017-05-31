@@ -1,0 +1,11 @@
+[Unit]
+Description=Removes the has_keuyboard file from the system
+
+[Service]
+Type=oneshot
+# TODO: read this from /etc/udev_keyboard_exists.conf
+ExecStart=/bin/rm /var/has_keyboard
+
+[Install]
+WantedBy=multi-user.target
+

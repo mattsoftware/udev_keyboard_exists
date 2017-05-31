@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# TODO: Read this from udev_keyboard_exists.conf
 : ${KEYBOARD_FILE=/var/has_keyboard}
 
 if [[ "$ID_INPUT_KEYBOARD" == 1 ]]; then

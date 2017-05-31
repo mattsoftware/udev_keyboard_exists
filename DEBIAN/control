@@ -3,5 +3,5 @@ Architecture: all
 Maintainer: Matt Paine
 Priority: optional
 Version: $VERSION
-Description: Udev script to place a file in /lib/keyboard_exists when a keyboard is plugged in
+Description: Udev script to place a file in /var/keyboard_exists when a keyboard is plugged in
 

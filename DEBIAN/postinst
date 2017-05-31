@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
 udevadm control --reload-rules
+systemctl enable remove_keyboard_exists_file
 
